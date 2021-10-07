@@ -1,7 +1,7 @@
 const state = {
   userName: '',
   phone: '12345678910',
-  accountAddr: '',
+  accountAddr: '123456',
   isLoading: false,
   Popup: {
     open: false,

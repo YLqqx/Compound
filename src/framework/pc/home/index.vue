@@ -49,7 +49,7 @@
 
 <script>
 // 引入vuex
-// import { mapGetters } from "vuex";
+import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
@@ -60,7 +60,7 @@ export default {
   },
   // 计算属性
   computed: {
-    // ...mapGetters(["accountAddr"])
+    ...mapGetters(['accountAddr'])
   },
   methods: {
 
