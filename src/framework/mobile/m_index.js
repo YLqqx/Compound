@@ -3,6 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from '../../router/mobile/index'
+import store from '../../store/index'
+
+// 全局引入按需引入UI库 vant
+import '../../plugins/vant'
 
 Vue.config.productionTip = false
 
@@ -10,6 +14,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

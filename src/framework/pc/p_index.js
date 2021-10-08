@@ -10,6 +10,7 @@ import '../../plugins/vant'
 // 初始化web3
 // import {initWeb3} from '../../api/web3'
 // Vue.prototype.web3 = initWeb3()
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

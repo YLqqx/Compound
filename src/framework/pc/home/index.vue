@@ -33,17 +33,16 @@
       <div class="progress_1">
         <div class="progress_title">Borrow Limit</div>
         <div class="progress_count">
-          <van-progress  inactive :percentage="50" />
+          <van-progress
+            :percentage="50"
+            :show-pivot='false'
+            color="#607280"
+            track-color="#1e2429"
+          />
         </div>
-
-        <!-- <div>111111111111111111111111</div> -->
-        <!-- <van-button type="primary">主要按钮</van-button> -->
-        <!-- <van-progress inactive :percentage="50" /> -->
-        <!-- <van-progress class="progress_count" inactive :percentage="100" color='#637786'></van-progress> -->
         <div class="progress_num">$4.830.93</div>
       </div>
     </div>
-    <van-progress inactive :percentage="50" color='#070a0e' />
   </div>
 </template>
 
@@ -53,18 +52,15 @@ import { mapGetters } from 'vuex'
 export default {
   data () {
     return {
-      hint: 'Ropsten Testnet', // 网络模式提示
-      surplus: '余额余额', // 余额
-      site: '账户地址' // 账户地址
+      hint: 'Ropsten Testnet' // 网络模式提示
     }
   },
   // 计算属性
   computed: {
-    ...mapGetters(['accountAddr'])
+    // accountAddr 账户地址 surplus 余额
+    ...mapGetters(['accountAddr', 'surplus'])
   },
-  methods: {
-
-  }
+  methods: {}
 }
 </script>
 
@@ -83,23 +79,30 @@ export default {
   .choice_model {
     // background-color: olivedrab;
     color: #fff;
-    padding: 0 315px;
+    width: 1270px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     .cpd {
       display: flex;
+      align-items: center;
+      justify-content: start;
+      width: 322px;
     }
     .pattern {
+      flex: 1;
       display: flex;
+      align-items: center;
+      justify-content: center;
       color: #fff;
       .dashboard {
         margin-right: 20px;
-        padding: 5px;
+        padding-bottom: 5px;
         color: #00d395;
         border-bottom: 1px solid #00d395;
       }
       .vote {
-        padding: 5px;
+        padding-bottom: 5px;
       }
       .active {
         color: #00d395;
@@ -108,14 +111,18 @@ export default {
     }
     .account {
       display: flex;
+      width: 322px;
+      justify-content: end;
       .surplus_sum {
         margin-right: 20px;
         padding: 10px;
         background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
       }
       .site {
         padding: 10px;
         background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
       }
     }
   }
@@ -126,8 +133,8 @@ export default {
     //   background-color: olivedrab;
     display: flex;
     .content_left {
+      flex: 1;
       padding: 40px 95px;
-      background-color: olivedrab;
       .left_title {
         color: #00d395;
         display: flex;
@@ -157,11 +164,12 @@ export default {
       .middle_Info {
         color: #fff;
         font-size: 22px;
+        margin-top: 5px;
       }
     }
     .content_right {
+      flex: 1;
       padding: 40px 95px;
-      background-color: olivedrab;
       .right_title {
         color: #6863ed;
         display: flex;

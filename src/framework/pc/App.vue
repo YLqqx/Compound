@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- pc端 -->
     <router-view/>
   </div>
 </template>
