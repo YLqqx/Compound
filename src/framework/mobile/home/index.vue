@@ -50,7 +50,7 @@
               <div class="Collateral">Collateral</div>
             </div>
           </div>
-          <div class="Supply_content">
+          <div class="Supply_content" v-for="item in 3" :key="item">
             <div class="content_Info">
                 <div class="Info_img"><img src="@/assets/img/01.png" alt=""></div>
                 <div class="Info_name">
@@ -268,6 +268,8 @@ export default {
             }
             .content_btn {
                 padding-right: 10px;
+                display: flex;
+                align-items: center;
             }
           }
         }
